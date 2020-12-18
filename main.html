@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="ko"> 
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css.css">
+
+    <title>안진영,오은혜 포트폴리오</title>
+
+<!--스타일 추가 -->
+<style>
+#b2t {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    font-size: 64px;
+    font-weight: bold;
+    z-index: 10000;
+}
+#b2t>a:link, #b2t>a:visited {
+    color:crimson;
+    text-decoration: none;
+}
+#b2t>a:hover {
+    color:cornflowerblue;
+}
+
+#a1t {
+    display: none;
+    position: absolute;
+    top: 400px;
+    right: 200px;
+    font-size: 64px;
+    font-weight: bold;
+    z-index: 10000;
+}
+#a1t>a:link, #a1t>a:visited {
+    color:cornflowerblue;
+    text-decoration: none;
+}
+#a1t>a:hover {
+    color:crimson;
+}
+</style>
+
+</head>
+
+
+<body>
+
+    <div id="main">
+	 <div class="logo"><a href="main.html"><img src="logo.png" width="60%"></a></div>
+	    
+        
+        
+           
+    
+          <div class="bottom_a2">
+		  <div class="b2">
+            <img src="b2.jpg"  width="100%">
+            <!-- 텍스트 링크 -->
+            <p id="b2t"><a href="jinpage.html">jin</a></p>
+           
+        </div>
+            <img src="a2.jpg"  width="100%">
+        </div>
+        
+        <div class="bottom_b1">
+		<div class="a1">
+            <img src="a1.jpg" width="100%">
+            <p id="a1t"><a href="hyepage.html">hye</a></p>
+        </div>
+            <img src="b1.jpg"  width="100%">
+            
+        </div>
+       
+      
+    </div>
+
+    <script src="jquery-3.5.1.js"></script>
+        <script>
+
+// b2-진영 a1-은혜
+ $(document).ready(function(){
+                $(".b2").on('mouseover', function(){
+                    $(".a1").stop().fadeOut(300);
+                    $("#b2t").stop().fadeIn(300); // 텍스트 fadein
+                });
+                $(".b2").on('mouseleave', function(){
+                    $(".a1").stop().fadeIn(300);
+                    $("#b2t").stop().fadeOut(300); // 텍스트 fadeout
+                });
+                $(".a1").on('mouseover', function(){
+                    $(".b2").stop().fadeOut(300);
+                    $("#a1t").stop().fadeIn(300);
+                });
+                $(".a1").on('mouseleave', function(){
+                    $(".b2").stop().fadeIn(300);
+                    $("#a1t").stop().fadeOut(300);
+                });
+            });
+
+    
+            </script>
+            <div id="footer">
+                <div class="end"><h4>Get In Touch</h4></div>
+                <div class="end">jinyoungahn00@gmail.com</div>
+                <div class="end">ddoeh8026@gmail.com</div>
+                <br> 
+                <div style="width: 15%; float: left;">
+                    &copy 2020 DXD-PORTFOLIO</div>
+                <div style="width: 15%; float: right;">
+                <a href="#"><img class= "aa" src="Twitter.png"></a>
+                <a href="#"><img class= "aa" src="Facebook.png"></a>
+                <a href="https://www.instagram.com/j__y_00/"><img class= "aa" src="Instar.png"></a>
+            </div>
+            </body>
+                
+            </html>
